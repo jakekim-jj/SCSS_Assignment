@@ -1,0 +1,78 @@
+@media (min-width:700px){
+
+
+    .grid-gallery{
+        // @include flexBox(flex,space-between,space-between,nowrap);
+
+        .gallery-bottom {
+            display: flex;
+            justify-content: space-between;
+            width:90%;
+        
+            aside {
+                width: 230px;
+                height: 200px;
+                @include bgPic($picTablet);
+            }
+        }
+    
+
+        [class*="gallery-box-"]{
+            width:35%;
+            
+        }
+
+    }
+
+
+    .subscribe{
+        padding:3%;
+
+        
+        > h2 {
+            padding: 5%;
+        }
+
+        > form {
+            width: 92%;
+        }
+
+        [type="email"]{
+            width:95%;
+            padding:3%;
+        }
+
+        [type="submit"]{
+            width:22%;
+            padding:2%;
+            height:20%;
+        }
+
+
+
+    }
+
+
+    .contact{
+
+        > form {            
+            @include flexBox(flex,space-between,center,wrap,20px);
+        }
+
+
+        [id="name"], [id="email-contact"]{
+            width:45%;
+        }
+
+    }
+
+
+
+    .footer{
+        height: 20vh;
+
+        .icons{
+            width:40%;
+        }
+    }
+}
