@@ -1,4 +1,75 @@
 @media (min-width: 300px) {
+    
+    .navigation{
+        display:none;
+    }
+
+    .header{
+        @include bgPic("/img/mountains.jpg",center,center);
+        width:100%;
+        height:75vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        h2{
+            margin-top:15%;
+            margin-bottom:8%;
+            color:white;
+            width:50%;
+            text-align: center;
+            border-bottom:0;
+        }
+
+        p{
+            width:50%;
+            color:white;
+            text-align:center;
+            margin-bottom:8%;
+        }
+
+        .header_btn{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .login{
+            padding: 5%;
+            font-size: 90%;
+            color: white;
+            font-weight: 600;
+            border: 2px solid white;
+            background-color: transparent;
+            font-size:15px;
+            width:12vh;
+        }
+
+        .signup{
+            width:15vh;
+            font-size:15px;
+            background-color: $bgColorLightBlue;
+            color: white;
+            font-weight: 600;
+            padding: 3%;
+        }
+    }
+
+    .carousel-item{
+        padding:3%;
+        height:52vh;
+        background-color: whitesmoke;
+        border:5vh solid gray;
+        img{
+            width:30% !important;
+            margin: 0 auto;
+        }
+        .carousel-caption{
+            color:black;
+        }
+    }
 
     .grid-gallery {
         @include flexBox(column,center,center,wrap);
@@ -6,9 +77,9 @@
 
         .gallery-bottom {
             padding: 2%;
-            display: flex;
             flex-direction: column;
-            row-gap: 40px;
+            row-gap: 30px;
+            text-align: center;
             h3 {
                 padding: 5% 0%;
             }
@@ -22,7 +93,7 @@
 
         [class*="gallery-box-"] {
             padding-left: 3%;
-            padding: 5%;
+            padding: 2.5%;
             background-color: $bgColorLightGray;
             @include flexBox(column,flex-start,flex-start,nowrap);
         }
@@ -83,6 +154,12 @@
         > form {
             width: 95%;
             @include flexBox(column,center,center,nowrap,20px);
+        }
+
+        .teem{
+            @include flexBox(row);
+            width:100%;
+            row-gap:10px;
         }
 
         [type="text"],[type="email"],textarea {
